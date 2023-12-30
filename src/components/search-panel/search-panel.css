@@ -1,0 +1,31 @@
+.search-panel {
+	background-color: #425a7d;
+	padding: 20px;
+	color: #fff;
+	border-radius: 5px;
+	box-shadow: 4px 8px 30px gray;
+}
+
+.search-panel:not(:last-child) {
+	margin-bottom: 25px;
+}
+
+.input-search {
+	width: 100%;
+	height: 40px;
+	padding: 0 20px;
+	font-size: 16px;
+	border-radius: 4px;
+	border: none;
+	transition: border-color 0.3s;
+	border: 2px solid transparent;
+}
+
+.input-search:not(:last-child) {
+	margin-bottom: 15px;
+}
+
+.input-search:focus {
+	outline: none;
+	border-color: orange;
+}

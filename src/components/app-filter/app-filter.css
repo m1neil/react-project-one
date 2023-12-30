@@ -1,0 +1,24 @@
+.app-btn {
+	padding: 10px 15px;
+	background-color: transparent;
+	color: #fff;
+	font-size: 16px;
+	border: 1px solid #fff;
+	transition: all 0.3s;
+}
+
+.app-btn:nth-child(1) {
+	border-radius: 5px 0 0 5px;
+}
+.app-btn:nth-child(2) {
+	border-radius: 0;
+}
+.app-btn:nth-child(3) {
+	border-radius: 0 5px 5px 0;
+}
+
+.app-btn:hover,
+.app-btn._active {
+	background-color: #fff;
+	color: #000;
+}

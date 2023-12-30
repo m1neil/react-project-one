@@ -1,0 +1,48 @@
+.employee-item {
+	list-style-type: none;
+	padding: 20px 15px;
+	display: grid;
+	grid-template-columns: minmax(100px, 1fr) auto auto;
+	align-items: center;
+	column-gap: 10px;
+}
+
+.employee-item:not(:last-child) {
+	border-bottom: 2px solid gray;
+}
+
+.employee-item__employee {
+	font-size: 17px;
+}
+
+.employee-item__salary {
+	border: none;
+	width: 100%;
+	font-size: 17px;
+	background-color: transparent;
+}
+
+.employee-item__actions {
+	display: flex;
+	column-gap: 5px;
+}
+
+.employee__button {
+	cursor: pointer;
+	border-radius: 5px;
+	font-size: 17px;
+	padding: 10px;
+	border: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(227, 227, 227);
+}
+
+.employee-item__favorites {
+	color: rgb(226, 185, 36);
+}
+
+.employee-item__trash {
+	color: rgb(203, 8, 8);
+}

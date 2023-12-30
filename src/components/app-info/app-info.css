@@ -1,0 +1,19 @@
+.app-info {
+	background-color: #425a7d;
+	padding: 20px;
+	color: #fff;
+	border-radius: 5px;
+	box-shadow: 0 8px 13px gray;
+}
+
+.app-info:not(:last-child) {
+	margin-bottom: 25px;
+}
+
+.app-title {
+	font-weight: 400;
+}
+
+.app-title:not(:last-child) {
+	margin-bottom: 15px;
+}
