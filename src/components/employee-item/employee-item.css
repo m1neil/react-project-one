@@ -46,3 +46,8 @@
 .employee-item__trash {
 	color: rgb(203, 8, 8);
 }
+
+.employee-item.increase .employee-item__employee,
+.employee-item.increase .employee-item__salary {
+	color: rgb(226, 185, 36);
+}

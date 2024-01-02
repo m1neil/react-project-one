@@ -1,13 +1,18 @@
 import "./employee-item.css";
 
-const EmployeeItem = () => {
+const EmployeeItem = ({ name, salary, increase }) => {
+	let classNames = "employee-item";
+	if (increase) {
+		classNames += " increase";
+	}
+
 	return (
-		<li className="employee-item">
-			<div className="employee-item__employee">John Smith</div>
+		<li className={classNames}>
+			<div className="employee-item__employee">{name}</div>
 			<input
 				type="text"
 				className="employee-item__salary"
-				defaultValue="1000$"
+				defaultValue={salary + "$"}
 			></input>
 			<div className="employee-item__actions">
 				<button className="employee__button employee-item__favorites">
