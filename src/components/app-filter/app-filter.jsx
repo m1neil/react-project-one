@@ -1,11 +1,39 @@
 import "./app-filter.css";
 
-const AppFilter = () => {
+const AppFilter = ({ onUpdateValueFilter, filter }) => {
+	function updateValueFilter(event) {
+		const target = event.target;
+		if (!target.closest("[data-filter]")) return;
+		onUpdateValueFilter(target.getAttribute("data-filter"));
+	}
+
+	const buttons = [
+		{ nameFilter: "all", text: "Все сотрудники" },
+		{ nameFilter: "favorite", text: "На повышение" },
+		{ nameFilter: "salary", text: "З/П больше 1000$" },
+	];
+
+	const elements = buttons.map(({ nameFilter, text }) => {
+		let classesForButtons = "app-btn";
+		classesForButtons += nameFilter === filter ? " _active" : "";
+
+		return (
+			<button
+				key={nameFilter}
+				data-filter={nameFilter}
+				className={classesForButtons}
+			>
+				{text}
+			</button>
+		);
+	});
+
 	return (
-		<div className="app-filter">
-			<button className="app-btn _active">Все сотрудники</button>
-			<button className="app-btn">На повышение</button>
-			<button className="app-btn">З/П больше 1000$</button>
+		<div
+			onClick={updateValueFilter}
+			className="app-filter"
+		>
+			{elements}
 		</div>
 	);
 };
