@@ -1,4 +1,5 @@
 .employee-item {
+	background-color: #fff;
 	list-style-type: none;
 	padding: 20px 15px;
 	display: grid;
@@ -14,6 +15,9 @@
 .employee-item__employee {
 	font-size: 17px;
 }
+.employee-item__employee span {
+	cursor: pointer;
+}
 
 .employee-item__salary {
 	border: none;
@@ -24,6 +28,7 @@
 
 .employee-item__actions {
 	display: flex;
+	align-items: center;
 	column-gap: 5px;
 }
 
@@ -50,4 +55,13 @@
 .employee-item.increase .employee-item__employee,
 .employee-item.increase .employee-item__salary {
 	color: rgb(226, 185, 36);
+}
+
+.fa-star {
+	opacity: 0;
+	color: rgb(226, 185, 36);
+}
+
+.employee-item.star .employee-item__actions .fa-star {
+	opacity: 1;
 }
